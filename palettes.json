@@ -1,0 +1,218 @@
+{
+  "aliases": {
+    "catppuccin": "catppuccin",
+    "catppuccin-mocha": "catppuccin",
+    "catppuccin-latte": "catppuccin-latte",
+    "latte": "catppuccin-latte",
+    "light": "catppuccin-latte",
+    "terminal": "terminal",
+    "tokyo-night": "tokyo-night",
+    "tokyonight": "tokyo-night",
+    "tokyo-night-day": "tokyo-night-day",
+    "tokyo-day": "tokyo-night-day",
+    "tokyonight-day": "tokyo-night-day",
+    "dracula": "dracula",
+    "nord": "nord",
+    "gruvbox": "gruvbox",
+    "gruvbox-dark": "gruvbox",
+    "gruvbox-light": "gruvbox-light",
+    "one-dark": "one-dark",
+    "onedark": "one-dark",
+    "one-light": "one-light",
+    "onelight": "one-light",
+    "solarized": "solarized",
+    "solarized-dark": "solarized",
+    "solarized-light": "solarized-light",
+    "kanagawa": "kanagawa",
+    "kanagawa-lotus": "kanagawa-lotus",
+    "lotus": "kanagawa-lotus",
+    "rose-pine": "rose-pine",
+    "rosepine": "rose-pine",
+    "rose-pine-dawn": "rose-pine-dawn",
+    "rosepine-dawn": "rose-pine-dawn",
+    "dawn": "rose-pine-dawn",
+    "vesper": "vesper"
+  },
+  "palettes": {
+    "catppuccin": {
+      "active_row_bg": "#1e1e2e",
+      "selection_bg": "#313244",
+      "overlay0": "#6c7086",
+      "text": "#cdd6f4",
+      "subtext0": "#a6adc8",
+      "green": "#a6e3a1",
+      "yellow": "#f9e2af",
+      "red": "#f38ba8"
+    },
+    "catppuccin-latte": {
+      "active_row_bg": "#e6e9ef",
+      "selection_bg": "#bdd0f5",
+      "overlay0": "#9ca0b0",
+      "text": "#4c4f69",
+      "subtext0": "#6c6f85",
+      "green": "#40a02b",
+      "yellow": "#df8e1d",
+      "red": "#d20f39"
+    },
+    "terminal": {
+      "active_row_bg": "dark_gray",
+      "selection_bg": "reset",
+      "overlay0": "gray",
+      "text": "reset",
+      "subtext0": "gray",
+      "green": "green",
+      "yellow": "yellow",
+      "red": "light_red"
+    },
+    "tokyo-night": {
+      "active_row_bg": "#232636",
+      "selection_bg": "#2d3650",
+      "overlay0": "#565f89",
+      "text": "#c0caf5",
+      "subtext0": "#a9b1d6",
+      "green": "#9ece6a",
+      "yellow": "#e0af68",
+      "red": "#f7768e"
+    },
+    "tokyo-night-day": {
+      "active_row_bg": "#d2d3da",
+      "selection_bg": "#b6cae7",
+      "overlay0": "#8990b3",
+      "text": "#3760bf",
+      "subtext0": "#6172b0",
+      "green": "#587539",
+      "yellow": "#8c6c3e",
+      "red": "#f52a65"
+    },
+    "dracula": {
+      "active_row_bg": "#373c52",
+      "selection_bg": "#463f5d",
+      "overlay0": "#6272a4",
+      "text": "#f8f8f2",
+      "subtext0": "#d2d2dc",
+      "green": "#50fa7b",
+      "yellow": "#f1fa8c",
+      "red": "#ff5555"
+    },
+    "nord": {
+      "active_row_bg": "#434c5e",
+      "selection_bg": "#40505d",
+      "overlay0": "#4c566a",
+      "text": "#eceff4",
+      "subtext0": "#d8dee9",
+      "green": "#a3be8c",
+      "yellow": "#ebcb8b",
+      "red": "#bf616a"
+    },
+    "gruvbox": {
+      "active_row_bg": "#323130",
+      "selection_bg": "#4b3f27",
+      "overlay0": "#928374",
+      "text": "#ebdbb2",
+      "subtext0": "#d5c4a1",
+      "green": "#b8bb26",
+      "yellow": "#fabd2f",
+      "red": "#fb4934"
+    },
+    "gruvbox-light": {
+      "active_row_bg": "#f2e5bc",
+      "selection_bg": "#ebdbb2",
+      "overlay0": "#928374",
+      "text": "#3c3836",
+      "subtext0": "#504945",
+      "green": "#79740e",
+      "yellow": "#b57614",
+      "red": "#9d0006"
+    },
+    "one-dark": {
+      "active_row_bg": "#313640",
+      "selection_bg": "#334659",
+      "overlay0": "#5c6370",
+      "text": "#abb2bf",
+      "subtext0": "#969ca8",
+      "green": "#98c379",
+      "yellow": "#e5c07b",
+      "red": "#e06c75"
+    },
+    "one-light": {
+      "active_row_bg": "#d8dbe2",
+      "selection_bg": "#cddbf8",
+      "overlay0": "#a0a1a7",
+      "text": "#383a42",
+      "subtext0": "#686b77",
+      "green": "#50a14f",
+      "yellow": "#c18401",
+      "red": "#e45649"
+    },
+    "solarized": {
+      "active_row_bg": "#164b57",
+      "selection_bg": "#083e55",
+      "overlay0": "#586e75",
+      "text": "#93a1a1",
+      "subtext0": "#839496",
+      "green": "#859900",
+      "yellow": "#b58900",
+      "red": "#dc322f"
+    },
+    "solarized-light": {
+      "active_row_bg": "#eee8d5",
+      "selection_bg": "#c9dcdf",
+      "overlay0": "#93a1a1",
+      "text": "#657b83",
+      "subtext0": "#839496",
+      "green": "#859900",
+      "yellow": "#b58900",
+      "red": "#dc322f"
+    },
+    "kanagawa": {
+      "active_row_bg": "#363646",
+      "selection_bg": "#32384b",
+      "overlay0": "#727169",
+      "text": "#dcd7ba",
+      "subtext0": "#c8c3aa",
+      "green": "#76946a",
+      "yellow": "#c0a36e",
+      "red": "#c34043"
+    },
+    "kanagawa-lotus": {
+      "active_row_bg": "#d5cea3",
+      "selection_bg": "#dcd5ac",
+      "overlay0": "#a09cac",
+      "text": "#545464",
+      "subtext0": "#43436c",
+      "green": "#6f894e",
+      "yellow": "#77713f",
+      "red": "#c84053"
+    },
+    "rose-pine": {
+      "active_row_bg": "#26233a",
+      "selection_bg": "#3b344b",
+      "overlay0": "#6e6a86",
+      "text": "#e0def4",
+      "subtext0": "#c8c5dc",
+      "green": "#31748f",
+      "yellow": "#f6c177",
+      "red": "#eb6f92"
+    },
+    "rose-pine-dawn": {
+      "active_row_bg": "#e3d9cf",
+      "selection_bg": "#f2e9e1",
+      "overlay0": "#9893a5",
+      "text": "#464261",
+      "subtext0": "#797593",
+      "green": "#286983",
+      "yellow": "#ea9d34",
+      "red": "#b4637a"
+    },
+    "vesper": {
+      "active_row_bg": "#101010",
+      "selection_bg": "#232323",
+      "overlay0": "#5c5c5c",
+      "text": "#ffffff",
+      "subtext0": "#a0a0a0",
+      "green": "#99ffe4",
+      "yellow": "#ffc799",
+      "red": "#ff8080"
+    }
+  }
+}
