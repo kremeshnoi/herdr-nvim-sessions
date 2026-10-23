@@ -33,10 +33,6 @@ impl Color {
         }
     }
 
-    pub fn is_reset(self) -> bool {
-        self == Color::Reset
-    }
-
     pub fn parse(value: &str) -> Option<Color> {
         let value = value.trim().to_lowercase();
         if matches!(value.as_str(), "reset" | "default" | "none" | "transparent") {
@@ -93,11 +89,12 @@ impl Color {
 
 #[derive(Clone, Debug)]
 pub struct Palette {
+    pub sidebar_bg: Color,
     pub active_row_bg: Color,
-    pub selection_bg: Color,
     pub overlay0: Color,
     pub text: Color,
     pub subtext0: Color,
+    pub mauve: Color,
     pub green: Color,
     pub yellow: Color,
     pub red: Color,
@@ -109,23 +106,25 @@ fn config_path() -> PathBuf {
         .unwrap_or_else(|| home_dir().join(".config/herdr/config.toml"))
 }
 
-fn theme_config() -> toml::Table {
+fn herdr_config() -> toml::Table {
     fs::read_to_string(config_path())
         .ok()
         .and_then(|content| content.parse::<toml::Table>().ok())
-        .and_then(|config| {
-            config
-                .get("theme")
-                .and_then(|theme| theme.as_table())
-                .cloned()
-        })
+        .unwrap_or_default()
+}
+
+fn config_section(name: &str) -> toml::Table {
+    herdr_config()
+        .get(name)
+        .and_then(|section| section.as_table())
+        .cloned()
         .unwrap_or_default()
 }
 
 impl Palette {
     pub fn load() -> Palette {
         let themes: Value = serde_json::from_str(PALETTES).expect("palettes.json is valid");
-        let config = theme_config();
+        let config = config_section("theme");
         let requested = config
             .get("name")
             .and_then(|name| name.as_str())
@@ -146,11 +145,12 @@ impl Palette {
                 .unwrap_or(Color::Reset)
         };
         Palette {
+            sidebar_bg: color("sidebar_bg"),
             active_row_bg: color("active_row_bg"),
-            selection_bg: color("selection_bg"),
             overlay0: color("overlay0"),
             text: color("text"),
             subtext0: color("subtext0"),
+            mauve: color("mauve"),
             green: color("green"),
             yellow: color("yellow"),
             red: color("red"),
