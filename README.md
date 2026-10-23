@@ -4,14 +4,10 @@ Herdr plugin that shows every running Neovim session across all Herdr
 workspaces in a sidebar pane, drawn like Herdr's own spaces and agents lists.
 Jump to any editor with one key or a click.
 
-```text
- ○ api · server
-   src/handlers/auth.rs
- ● web · ui
-   src/components/Header.tsx [+2]
- ● dotfiles
-   init.lua
-```
+## Showcase
+
+<img width="1920" height="1080" alt="{BB8E2C55-4DAB-46FE-A7D9-D8F3C36948F3}" src="https://github.com/user-attachments/assets/35fe38bf-3a36-4652-8d52-a643bfc54e3b" />
+<img width="1920" height="1080" alt="{0FD26C33-C2E4-4620-B561-0F8ECF87EAF7}" src="https://github.com/user-attachments/assets/1998348a-b1c3-4801-8f44-19ebde9def8b" />
 
 ## Requirements
 
