@@ -44,6 +44,7 @@ pub struct Session {
     pub workspace_number: u64,
     pub tab_label: String,
     pub tab_number: u64,
+    pub tab_visible: bool,
     pub cwd: String,
     pub focused: bool,
     pub file: String,
@@ -100,6 +101,13 @@ fn nvim_pids(pane_id: &str) -> Vec<u32> {
         .into_iter()
         .flatten()
         .filter(|process| process["name"] == "nvim")
+        .filter(|process| {
+            !process["argv"]
+                .as_array()
+                .into_iter()
+                .flatten()
+                .any(|arg| arg == "--headless")
+        })
         .filter_map(|process| process["pid"].as_u64().map(|pid| pid as u32))
         .collect()
 }
@@ -224,6 +232,12 @@ pub fn collect(own_pane_id: Option<&str>) -> Result<Vec<Session>> {
     let workspaces = labels_by_id(&snapshot["workspaces"], "workspace_id");
     let tabs = labels_by_id(&snapshot["tabs"], "tab_id");
     let focused_pane = snapshot["focused_pane_id"].as_str();
+    let mut tab_counts: HashMap<&str, usize> = HashMap::new();
+    for tab in snapshot["tabs"].as_array().into_iter().flatten() {
+        if let Some(workspace_id) = tab["workspace_id"].as_str() {
+            *tab_counts.entry(workspace_id).or_default() += 1;
+        }
+    }
     let children = child_pids_by_parent();
 
     let mut found: Vec<(Session, Option<PathBuf>)> = Vec::new();
@@ -257,6 +271,7 @@ pub fn collect(own_pane_id: Option<&str>) -> Result<Vec<Session>> {
             workspace_number,
             tab_label,
             tab_number,
+            tab_visible: tab_counts.get(workspace_id).copied().unwrap_or_default() > 1,
             cwd: shorten_home(cwd),
             focused: Some(pane_id) == focused_pane,
             file: String::new(),
