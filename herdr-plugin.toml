@@ -1,0 +1,21 @@
+id = "kremeshnoi.nvim-sessions"
+name = "Nvim Sessions"
+version = "0.1.0"
+min_herdr_version = "0.9.3"
+description = "Sidebar listing every Neovim session across Herdr workspaces, with agent-style status dots"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["cargo", "build", "--release", "--locked"]
+
+[[panes]]
+id = "sidebar"
+title = "nvim"
+placement = "split"
+command = ["target/release/herdr-nvim-sessions", "sidebar"]
+
+[[actions]]
+id = "toggle"
+title = "Toggle nvim sessions sidebar"
+contexts = ["workspace"]
+command = ["target/release/herdr-nvim-sessions", "toggle"]
