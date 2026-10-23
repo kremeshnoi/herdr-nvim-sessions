@@ -1,0 +1,19 @@
+[package]
+name = "herdr-nvim-sessions"
+version = "0.1.0"
+edition = "2024"
+description = "Herdr plugin that lists every Neovim session across workspaces in a sidebar"
+license = "MIT"
+repository = "https://github.com/kremeshnoi/herdr-nvim-sessions"
+publish = false
+
+[dependencies]
+libc = "0.2"
+serde_json = "1"
+toml = "1"
+unicode-width = "0.2"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
