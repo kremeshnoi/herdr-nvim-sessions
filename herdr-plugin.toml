@@ -10,7 +10,7 @@ command = ["cargo", "build", "--release", "--locked"]
 
 [[panes]]
 id = "sidebar"
-title = "nvim"
+title = "\uf36f nvim"
 placement = "split"
 command = ["target/release/herdr-nvim-sessions", "sidebar"]
 
